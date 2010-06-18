@@ -1,0 +1,57 @@
+diff --git a/makefile b/makefile
+index 0c2d9f8..27f3d7b 100644
+--- a/makefile
++++ b/makefile
+@@ -20,7 +20,20 @@ INSTALL_DIR=/usr/local
+ INSTALL_DIR_BIN=$(INSTALL_DIR)/bin
+ INSTALL_DIR_MAN=$(INSTALL_DIR)/man/man1
+ 
+-# For Cygwin on Windows, set PYTHONEXT=.py
++DESTDIR         =
++prefix          = /usr
++exec_prefix     = $(prefix)
++man_prefix      = $(prefix)/share
++
++INSTALL         = /usr/bin/install
++INSTALL_BIN     = $(INSTALL) -m 755
++INSTALL_DATA    = $(INSTALL) -m 644
++INSTALL_OBJS    = $(NAME)
++
++MANDIR          = $(DESTDIR)$(man_prefix)/man/man1
++BINDIR          = $(DESTDIR)$(exec_prefix)/bin
++
++ For Cygwin on Windows, set PYTHONEXT=.py
+ # (EXE=.exe would be needed on some systems, but not for flawfinder)
+ EXE=
+ PYTHONEXT=
+@@ -32,7 +45,7 @@ PYTHONEXT=
+ 
+ RPMBUILD=rpmbuild
+ 
+-all: flawfinder.pdf flawfinder.1.gz
++all: flawfinder.pdf
+ 	chmod -R a+rX *
+ 
+ 
+@@ -45,7 +58,20 @@ all: flawfinder.pdf flawfinder.1.gz
+ # Note that this uses the "-p" option of mkdir; some very old Unixes
+ # might not support this option, but it's a really common option
+ # and required by SUSv3 (and probably earlier, I haven't checked).
+-install:
++
++install-bin:
++	# install-bin
++	$(INSTALL_BIN) -d $(BINDIR)
++	$(INSTALL_BIN)	 $(INSTALL_OBJS) $(BINDIR)
++
++install-man:
++	# install-man
++	$(INSTALL_BIN) -d $(MANDIR)
++	$(INSTALL_DATA) *.1 $(MANDIR)
++
++install: all install-bin install-man
++
++install-old:
+ 	-mkdir -p $(INSTALL_DIR_BIN)
+ 	cp flawfinder$(PYTHONEXT) $(INSTALL_DIR_BIN)/flawfinder$(PYTHONEXT)
+ 	-mkdir -p $(INSTALL_DIR_MAN)

@@ -1,0 +1,93 @@
+flawfinder
+------------------------------------------
+
+Examine source code and look for security weaknesses
+
+Program searches through C/C++ source code looking for potential
+security flaws, ranking them by likely severity. It's is a tool to
+quickly finding and removing at least some potential security problems
+before a program is widely released to the public. Flawfinder can also
+generate differential reports by pointing it to a patch (diff) file
+describing the code changes. This way it can be used to determine if
+the potential flaws found in code have increased or decreased after a
+commit to a source code management system like CVS or Subversion.
+
+Runtime requirements:
+  cygwin
+  python
+
+Build requirements:
+  cygwin
+  python
+  ghostscript
+
+Canonical homepage:
+  http://www.dwheeler.com/flawfinder
+  http://sourceforge.net/projects/flawfinder
+  http://packages.debian.org/flawfinder
+
+Canonical download:
+  http://sourceforge.net/projects/flawfinder
+
+Version control repository:
+  https://sourceforge.net/svn/?group_id=186989
+
+Mailing list:
+  https://sourceforge.net/mail/?group_id=186989
+  <flawfinder-discuss@lists.sourceforge.net>
+
+Forum / Wiki:
+
+IRC channel:
+
+Upstream contact:
+  NOTE: Visit authors site how to contact. No direct email
+  is accepted without a password. http://www.dwheeler.com/contactme.html
+
+  Author: David Wheeler <dwheeler@dwheeler.com>, <dwheeler@users.sf.net>
+  Bugs: https://sourceforge.net/tracker/?atid=919499&group_id=186989&func=browse
+
+License:
+  GPL
+
+Language:
+  C
+  Python
+
+------------------------------------
+
+Build instructions:
+  unpack flawfinder-1.27-1-src.tar.bz2
+    if you use setup to install this src package, it will be
+    unpacked under /usr/src automatically
+  cd /usr/src
+  ./flawfinder*.sh all
+
+This will create:
+  flawfinder-1.27-1.tar.bz2
+  flawfinder-1.27-1-src.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary distro:
+
+usr/bin/flawfinder
+usr/lib/python2.5/site-packages/flawfinder-1.27-py2.5.egg-info
+usr/share/doc/Cygwin/flawfinder-1.27.README
+usr/share/doc/flawfinder-1.27/COPYING
+usr/share/doc/flawfinder-1.27/ChangeLog
+usr/share/doc/flawfinder-1.27/README
+usr/share/doc/flawfinder-1.27/flawfinder.pdf
+usr/share/man/man1/flawfinder.1.gz
+
+------------------
+
+Port Notes:
+- This port is based on Debian package.
+- makefile: rewrote install target.
+
+----- version 1.27-1 -----
+- Initial release 2007-09-25 Jari Aalto
+
+Cygwin port maintained by: Jari Aalto <jari.aalto@cante.net>
+Copyright (C) 2007 Jari Aalto; Licenced under GPL v2 or later
