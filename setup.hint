@@ -8,4 +8,4 @@ describing the code changes. This way it can be used to determine if
 the potential flaws found in code have increased or decreased after a
 commit to a source code management system like CVS or Subversion."
 category: Security
-requires: cygwin python
+requires: python

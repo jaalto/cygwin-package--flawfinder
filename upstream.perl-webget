@@ -1,3 +1,2 @@
-# Copyright (C) 2007 Jari Aalto; Licenced under GPL v2 or later
 tag1: flawfinder
   http://packages.debian.org/unstable/flawfinder pregexp:tar.gz file:orig.tar.gz new: x:

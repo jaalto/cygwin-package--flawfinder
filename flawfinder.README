@@ -57,28 +57,20 @@ Language:
 ------------------------------------
 
 Build instructions:
-  unpack flawfinder-1.27-1-src.tar.bz2
+  unpack flawfinder-1.27-2-src.tar.bz2
     if you use setup to install this src package, it will be
     unpacked under /usr/src automatically
   cd /usr/src
   ./flawfinder*.sh all
 
 This will create:
-  flawfinder-1.27-1.tar.bz2
-  flawfinder-1.27-1-src.tar.bz2
+  flawfinder-1.27-2.tar.bz2
+  flawfinder-1.27-2-src.tar.bz2
 
 -------------------------------------------
 
 Files included in the binary distro:
-
-usr/bin/flawfinder
-usr/lib/python2.5/site-packages/flawfinder-1.27-py2.5.egg-info
-usr/share/doc/Cygwin/flawfinder-1.27.README
-usr/share/doc/flawfinder-1.27/COPYING
-usr/share/doc/flawfinder-1.27/ChangeLog
-usr/share/doc/flawfinder-1.27/README
-usr/share/doc/flawfinder-1.27/flawfinder.pdf
-usr/share/man/man1/flawfinder.1.gz
+  See Cygwin package archive
 
 ------------------
 
@@ -86,8 +78,11 @@ Port Notes:
 - This port is based on Debian package.
 - makefile: rewrote install target.
 
+----- version 1.27-2 -----
+- Python 2.6 2010-06-17 Jari Aalto
+
 ----- version 1.27-1 -----
 - Initial release 2007-09-25 Jari Aalto
 
 Cygwin port maintained by: Jari Aalto <jari.aalto@cante.net>
-Copyright (C) 2007 Jari Aalto; Licenced under GPL v2 or later
+Copyright (C) 2007-2010 Jari Aalto; Licenced under GPL v2 or later

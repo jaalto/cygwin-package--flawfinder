@@ -1,8 +1,6 @@
--- Copyright (C) 2007 Jari Aalto; Licenced under GPL v2 or later
-
 To: cygwin-announce@cygwin.com
-Subject: Updated: package N.N
-Subject: New package: flawfinder 1.27 -- Examine source code and look for security weaknesses
+Subject: Updated: flawfinder 1.27-2 -- Examine source code and look for security weaknesses
+--text follows this line--
 
 PACKAGE DESCRIPTION
 ===================
@@ -22,7 +20,7 @@ commit to a source code management system like CVS or Subversion.
 CHANGES SINCE LAST RELEASE
 ==========================
 
-None.
+- Built for Python 2.6
 
 INSTALL OR UPGRADE NOTES
 ========================
