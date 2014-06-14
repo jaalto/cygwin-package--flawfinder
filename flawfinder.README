@@ -13,11 +13,10 @@ the potential flaws found in code have increased or decreased after a
 commit to a source code management system like CVS or Subversion.
 
 Runtime requirements:
-  cygwin
   python
 
 Build requirements:
-  cygwin
+  quilt
   python
   ghostscript
 
